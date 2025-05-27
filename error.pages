@@ -1,0 +1,13 @@
+error_page 400 /http-error/400.html;
+error_page 401 /http-error/401.html;
+error_page 403 /http-error/403.html;
+error_page 404 /http-error/404.html;
+error_page 500 /http-error/500.html;
+error_page 501 /http-error/501.html;
+error_page 502 /http-error/502.html;
+error_page 503 /http-error/503.html;
+
+location /http-error/ {
+    alias /etc/nginx/html/http-error/;
+    internal;
+}

@@ -1,0 +1,16 @@
+services:
+  nginx:
+    container_name: nginx
+    image: 'api.repoflow.io/herd.io/docker/nginx:1.25.5.2'
+    ports:
+      - '80:80'
+      - '81:81'
+
+    environment:
+      - GVAR_HELLO_WORLD_MSG=Oie, Tudo bem?
+
+    volumes:
+      # Descomentar a linha caso deseje usar uma configuração personalizada.
+      - ./nginx.server-default.conf:/etc/nginx/conf.d/nginx.server-default.conf
+      - ./logs/nginx/:/var/log/nginx/
+      - ./www/:/opt/www/
