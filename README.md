@@ -16,20 +16,20 @@ A lightweight and customizable Docker image for serving static web applications 
 
 3. After the build completes, tag your image, so you can push the image to your repository:
 
-   `docker tag nginx:1.25.5.2 api.repoflow.io/herd.io/docker/nginx:1.25.5.2`
-   `docker tag nginx:1.25.5.2 api.repoflow.io/herd.io/docker/nginx:latest`
+   `docker tag nginx:1.25.5.2 api.repoflow.io/desiderati/docker/nginx:1.25.5.2`
+   `docker tag nginx:1.25.5.2 api.repoflow.io/desiderati/docker/nginx:latest`
 
 4. Run the following command to push this image to your repository:
 
-   `docker push api.repoflow.io/herd.io/docker/nginx:1.25.5.2`
-   `docker push api.repoflow.io/herd.io/docker/nginx:latest`
+   `docker push api.repoflow.io/desiderati/docker/nginx:1.25.5.2`
+   `docker push api.repoflow.io/desiderati/docker/nginx:latest`
 
 ### Example
 
    ```
    docker build --progress=plain -t nginx:1.25.5.2 .
-   docker tag nginx:1.25.5.2 api.repoflow.io/herd.io/docker/nginx:1.25.5.2
-   docker tag nginx:1.25.5.2 api.repoflow.io/herd.io/docker/nginx:latest
-   docker push api.repoflow.io/herd.io/docker/nginx:1.25.5.2
-   docker push api.repoflow.io/herd.io/docker/nginx:latest
+   docker tag nginx:1.25.5.2 api.repoflow.io/desiderati/docker/nginx:1.25.5.2
+   docker tag nginx:1.25.5.2 api.repoflow.io/desiderati/docker/nginx:latest
+   docker push api.repoflow.io/desiderati/docker/nginx:1.25.5.2
+   docker push api.repoflow.io/desiderati/docker/nginx:latest
    ```
