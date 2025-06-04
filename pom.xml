@@ -7,8 +7,8 @@
     <artifactId>docker-nginx</artifactId>
 
     <!--
-        Informações meramente ilustrativas!
-        Antes de mudar a versão aqui, lembre-se de mudar a versão no arquivo README.md!!!
+        Illustrative information only!
+        Before changing the version here, make sure to update the version in the README.md file as well!
     -->
     <version>1.25.5.2</version>
     <packaging>pom</packaging>

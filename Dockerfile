@@ -27,7 +27,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && apt-get install -y vim-tiny
 
-# Desabilitado o Auto Discovery de aplicações NGINX. Mantindo por questões de documentação.
+# Disabled NGINX application auto-discovery. Kept for documentation purposes.
 #LABEL "com.datadoghq.ad.check_names"='["nginx"]'
 #LABEL "com.datadoghq.ad.init_configs"='[{}]'
 #LABEL "com.datadoghq.ad.instances"='[{"nginx_status_url": "http://localhost:81/nginx_status"}]'

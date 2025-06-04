@@ -1,8 +1,8 @@
 #!/bin/sh
 # vim:sw=4:ts=4:et
 
-# Precisei redefinir o docker-entrypoint.sh da versão padrão do NGINX, para que o Container possa ser iniciado
-# com a funcionalidade de Wait-For-It.
+# It was necessary to override the default NGINX docker-entrypoint.sh
+# so the container can start with Wait-For-It support.
 # Ref.: https://github.com/nginxinc/docker-nginx/blob/master/mainline/debian/docker-entrypoint.sh
 
 set -e
@@ -44,9 +44,9 @@ if /usr/bin/find "/docker-entrypoint.d/" -mindepth 1 -maxdepth 1 -type f -print 
         esac
     done
 
-    entrypoint_log "$0: Configuration complete; ready for start up"
+    entrypoint_log "$0: Configuration complete; ready for start up!"
 else
-    entrypoint_log "$0: No files found in /docker-entrypoint.d/, skipping configuration"
+    entrypoint_log "$0: No files found in /docker-entrypoint.d/, skipping configuration..."
 fi
 
 exec "$@"

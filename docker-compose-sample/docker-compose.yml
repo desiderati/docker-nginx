@@ -1,7 +1,7 @@
 services:
   nginx:
     container_name: nginx
-    image: 'api.repoflow.io/desiderati/docker/nginx:1.25.5.2'
+    image: 'api.repoflow.io/desiderati/docker/library/nginx:1.25.5.2'
     ports:
       - '80:80'
       - '81:81'
@@ -10,7 +10,7 @@ services:
       - GVAR_HELLO_WORLD_MSG=Oie, Tudo bem?
 
     volumes:
-      # Descomentar a linha caso deseje usar uma configuração personalizada.
+      # Uncomment the following line if you want to use a custom configuration.
       - ./nginx.server-default.conf:/etc/nginx/conf.d/nginx.server-default.conf
       - ./logs/nginx/:/var/log/nginx/
       - ./www/:/opt/www/
