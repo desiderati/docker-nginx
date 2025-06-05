@@ -22,7 +22,7 @@ and documentation portals with optimal performance and minimal configuration.
 
 ## Features
 
-- Based on official Nginx 1.25.5 image
+- Based on the official Nginx 1.25.5 image
 - Optimized for serving static content
 - Custom error pages for common HTTP status codes
 - Environment variable substitution in static content
