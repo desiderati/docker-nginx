@@ -1,4 +1,4 @@
-# Custom Docker Image for Nginx
+# Custom Docker Image for Nginx [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A lightweight and customizable Docker image for serving static web applications using Nginx.
 Ideal for deploying frontend projects like single-page applications (SPAs), static websites,
@@ -205,7 +205,3 @@ docker run -d -p 80:80 \
 ## Author
 
 Felipe Desiderati <felipedesiderati@springbloom.dev> (https://github.com/desiderati)
-
-## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
