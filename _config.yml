@@ -1,0 +1,4 @@
+title: Custom Docker Image for Nginx
+description: A lightweight and customizable Docker image for serving static web applications using Nginx
+show_downloads: false
+theme: jekyll-theme-cayman

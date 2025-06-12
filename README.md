@@ -1,22 +1,22 @@
-# docker-nginx
+# Custom Docker Image for Nginx
 
-A lightweight and customizable Docker image for serving static web applications using Nginx. 
-Ideal for deploying frontend projects like single-page applications (SPAs), static websites, 
+A lightweight and customizable Docker image for serving static web applications using Nginx.
+Ideal for deploying frontend projects like single-page applications (SPAs), static websites,
 and documentation portals with optimal performance and minimal configuration.
 
 ## Table of Contents
 
 - [Features](#features)
 - [Usage](#usage)
-  - [Basic Usage](#basic-usage)
-  - [Docker Compose](#docker-compose)
+    - [Basic Usage](#basic-usage)
+    - [Docker Compose](#docker-compose)
 - [Configuration](#configuration)
-  - [Environment Variables](#environment-variables)
-  - [Custom Configuration](#custom-configuration)
-  - [Volume Mounts](#volume-mounts)
+    - [Environment Variables](#environment-variables)
+    - [Custom Configuration](#custom-configuration)
+    - [Volume Mounts](#volume-mounts)
 - [Monitoring](#monitoring)
 - [Utilities](#utilities)
-  - [wait-for-it.sh](#wait-for-itsh)
+    - [wait-for-it.sh](#wait-for-itsh)
 - [Error Handling](#error-handling)
 - [Building and Publishing](#building-and-publishing)
 
@@ -129,8 +129,8 @@ The image includes a status endpoint for monitoring:
 
 ### wait-for-it.sh
 
-The image includes the `wait-for-it.sh` utility script that can be used 
-to wait for a service to be available before starting Nginx. 
+The image includes the `wait-for-it.sh` utility script that can be used
+to wait for a service to be available before starting Nginx.
 This is useful when your application depends on other services being available.
 
 Example usage:
@@ -149,10 +149,12 @@ This will wait for the database service to be available on port 5432 before star
 ## Error Handling
 
 Custom error pages are provided for common HTTP status codes:
+
 - 400, 401, 403, 404, 500, 501, 502, 503
 
 You can customize these pages by mounting your own error pages:
 ``
+
 ```bash
 docker run -d -p 80:80 \
   -v $(pwd)/path-to-your-custom-error-pages/:/etc/nginx/html/http-error/ \
@@ -200,6 +202,10 @@ docker run -d -p 80:80 \
     docker push api.repoflow.io/desiderati/docker/nginx:latest
     ```
 
-## License
+## Author
 
-This project is licensed under the MIT License.
+Felipe Desiderati <felipedesiderati@springbloom.dev> (https://github.com/desiderati)
+
+## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
